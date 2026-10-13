@@ -4,6 +4,8 @@
 
 [English](README.md) · [Advisory oficial](https://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-c9cx-7r7m-264v) · [Correção 2.x](https://github.com/InvoiceShelf/InvoiceShelf/pull/826) · [Correção 3.x](https://github.com/InvoiceShelf/InvoiceShelf/pull/822)
 
+Acompanhamento no VulDB: [submissão #1028117](https://vuldb.com/submit/1028117) — análise pendente, CVE solicitado.
+
 ## Resumo
 
 | Item | Valor |
@@ -70,6 +72,7 @@ Atualize para `2.4.4`, `3.0.0-alpha.4` ou versão posterior. A correção limita
 ## Referências
 
 - [GitHub Security Advisory](https://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-c9cx-7r7m-264v)
+- [Submissão VulDB #1028117](https://vuldb.com/submit/1028117)
 - [Repositório do InvoiceShelf](https://github.com/InvoiceShelf/InvoiceShelf)
 - [Correção da linha 2.x, PR #826](https://github.com/InvoiceShelf/InvoiceShelf/pull/826)
 - [Correção da linha 3.x, PR #822](https://github.com/InvoiceShelf/InvoiceShelf/pull/822)

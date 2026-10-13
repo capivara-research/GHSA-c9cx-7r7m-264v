@@ -4,6 +4,8 @@
 
 [Português do Brasil](README.pt-BR.md) · [Official advisory](https://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-c9cx-7r7m-264v) · [Fix for 2.x](https://github.com/InvoiceShelf/InvoiceShelf/pull/826) · [Fix for 3.x](https://github.com/InvoiceShelf/InvoiceShelf/pull/822)
 
+VulDB tracking: [submission #1028117](https://vuldb.com/submit/1028117) — analysis pending, CVE requested.
+
 ## At a glance
 
 | Item | Value |
@@ -89,6 +91,7 @@ Upgrade to `2.4.4`, `3.0.0-alpha.4`, or a later release. The fix restricts submi
 ## Disclosure and references
 
 - [Public GitHub Security Advisory](https://github.com/InvoiceShelf/InvoiceShelf/security/advisories/GHSA-c9cx-7r7m-264v)
+- [VulDB submission #1028117](https://vuldb.com/submit/1028117)
 - [InvoiceShelf repository](https://github.com/InvoiceShelf/InvoiceShelf)
 - [Patch for the 2.x line, PR #826](https://github.com/InvoiceShelf/InvoiceShelf/pull/826)
 - [Patch for the 3.x line, PR #822](https://github.com/InvoiceShelf/InvoiceShelf/pull/822)
