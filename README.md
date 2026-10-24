@@ -11,15 +11,27 @@ VulDB tracking: [submission #1028117](https://vuldb.com/submit/1028117) — anal
 | Item | Value |
 |---|---|
 | Product | InvoiceShelf |
+| Product repository | [`InvoiceShelf/InvoiceShelf`](https://github.com/InvoiceShelf/InvoiceShelf) |
 | Affected | `<= 2.4.3`; `3.0.0-alpha.1` through `3.0.0-alpha.3` |
 | Fixed | `2.4.4`; `3.0.0-alpha.4` |
 | Severity | Critical |
 | Weakness | CWE-284, CWE-863 |
-| Suggested CVSS v3.1 | `9.1 — AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H` |
+| Suggested CVSS v3.1 | `9.1 — CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H` |
 | Advisory | `GHSA-c9cx-7r7m-264v` |
 | CVE | No known CVE at publication time |
 
 ## Why this happens
+
+### Technical targets
+
+| Item | Value |
+|---|---|
+| Endpoint | `POST /api/v1/members` and the corresponding member update route |
+| Authorization context | Active tenant selected by the `company` request header |
+| Attacker-controlled parameters | `companies[].id` and `companies[].role` |
+| Validation | `app/Domains/Accounts/Http/Requests/MemberRequest.php::rules()` |
+| Write path | `app/Domains/Accounts/Application/MemberService.php::create()` / `update()` |
+| Controller | `app/Domains/Accounts/Http/Controllers/Company/MembersController.php` |
 
 `MemberRequest` validates only the shape of the client-controlled `companies` array. It does not establish that the caller owns the referenced company or may assign the requested role:
 
